@@ -17,7 +17,7 @@ dados_varios_clientes = [
     ("Lucas Martins", 27),
     ("Sofia Ferreira", 31),
 ]
-cursor.executemeny(
+cursor.executemany(
     "INSERT INTO clientes (nome,idade) VALUES (?,?)", dados_varios_clientes)
 conn.commit()
 
