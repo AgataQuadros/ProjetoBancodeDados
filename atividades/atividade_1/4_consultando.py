@@ -1,5 +1,6 @@
 import os 
 import sqlite3
+from prettytable import PrettyTable
 
 
 conn = sqlite3.connect("c:/python_agata/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
