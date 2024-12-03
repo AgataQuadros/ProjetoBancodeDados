@@ -6,19 +6,79 @@ from prettytable import PrettyTable
 conn = sqlite3.connect("c:/python_agata/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
 cursor = conn.cursor()
 
-cursor.execute("SELECT * FROM clientes")
-resultados = cursor.fetchall()
+pergunta = input("qual tabela consultar? ")
 
-os.system('cls')
+if pergunta == "cliente":
+    cursor.execute("SELECT * FROM clientes")
+    resultados = cursor.fetchall()
 
-tabela = PrettyTable()
+    os.system('cls')
 
-colunas = [descricao[0] for descricao in cursor.description]
+    tabela = PrettyTable()
 
-tabela.feal_names = colunas
+    colunas = [descricao[0] for descricao in cursor.description]
 
-for row in resultados:
-    tabela.add_row(row)
+    tabela.feal_names = colunas
 
-print(tabela)
-conn.close()
+    for row in resultados:
+        tabela.add_row(row)
+
+    print(tabela)
+    conn.close()
+    
+    
+elif pergunta == "site":
+    cursor.execute("SELECT * FROM site")
+    resultados = cursor.fetchall()
+
+    os.system('cls')
+
+    tabela = PrettyTable()
+
+    colunas = [descricao[0] for descricao in cursor.description]
+
+    tabela.feal_names = colunas
+
+    for row in resultados:
+        tabela.add_row(row)
+
+    print(tabela)
+    conn.close()
+    
+    
+elif pergunta == "destinos":
+    cursor.execute("SELECT * FROM destinos")
+    resultados = cursor.fetchall()
+
+    os.system('cls')
+
+    tabela = PrettyTable()
+
+    colunas = [descricao[0] for descricao in cursor.description]
+
+    tabela.feal_names = colunas
+
+    for row in resultados:
+        tabela.add_row(row)
+
+    print(tabela)
+    conn.close()
+    
+    
+elif pergunta == "passagem":
+    cursor.execute("SELECT * FROM passagem")
+    resultados = cursor.fetchall()
+
+    os.system('cls')
+
+    tabela = PrettyTable()
+
+    colunas = [descricao[0] for descricao in cursor.description]
+
+    tabela.feal_names = colunas
+
+    for row in resultados:
+        tabela.add_row(row)
+
+    print(tabela)
+    conn.close()
