@@ -2,7 +2,7 @@ import os
 import sqlite3
 
 
-conn = sqlite3.connect("c:/python_agata/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
+conn = sqlite3.connect("c:/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
 cursor = conn.cursor()
 
 os.system('cls')
@@ -32,7 +32,7 @@ elif pergunta == "site":
     
     
 elif pergunta == "destinos":
-    ponto_turistico = input("Digite o pony=to turistico para tirar do seu mapa: ")
+    ponto_turistico = input("Digite o ponto turistico para tirar do seu mapa: ")
 
     cursor.execute("DELETE FROM destinos WHERE pontos_turisticos = ?", (ponto_turistico,))
     conn.commit()
