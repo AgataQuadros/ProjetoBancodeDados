@@ -3,7 +3,7 @@ import sqlite3
 from prettytable import PrettyTable
 
 
-conn = sqlite3.connect("c:/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
+conn = sqlite3.connect("c:/python_agata/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
 cursor = conn.cursor()
 
 pergunta = input("qual tabela consultar? ")
