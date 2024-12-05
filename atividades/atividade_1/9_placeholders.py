@@ -1,7 +1,7 @@
 import sqlite3
 
 
-conn = sqlite3.connect("c:/python_agata/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
+conn = sqlite3.connect("c:/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
 cursor = conn.cursor()
 
 dados_clientes = ("João Silva", 12345678901, "joao@gmail.com", 998765432, "Cartão de Crédito")
