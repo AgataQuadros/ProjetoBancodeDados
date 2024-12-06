@@ -48,13 +48,13 @@ elif pergunta == "destinos":
 
 elif pergunta == "passagem":
     nome_cliente = input("adicione o destino: ")
-    assento = input("adicione o destino: ")
-    voo = input("adicione o destino: ")
+    assento = input("adicione o assento: ")
+    voo = input("adicione o voo: ")
     destino = input("adicione o destino: ")
-    data = input("adicione o destino: ")
-    horario = input("adicione o destino: ")
-    saida = input("adicione o destino: ")
-    compania_id =input("adicione o destino: ")
+    data = input("adicione a data da viagem: ")
+    horario = input("adicione o horario da viagem: ")
+    saida = input("adicione a saida: ")
+    compania_id =input("adicione a compania: ")
     dados_varias_passagens = nome_cliente, assento, voo, destino, data, horario, saida, compania_id
 
     cursor.executemany(
