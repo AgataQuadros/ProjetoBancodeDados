@@ -83,3 +83,4 @@ elif pergunta == "passagem":
 
     print(tabela)
     conn.close()
+    
