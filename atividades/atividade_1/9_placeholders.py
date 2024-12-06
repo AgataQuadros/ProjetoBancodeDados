@@ -16,6 +16,5 @@ cursor.execute("INSERT INTO passagem (nome_cliente, assento, voo, destino, data,
 dados_destinos = ("São Paulo", 1, "Av. Paulista, Museu do Ipiranga")
 cursor.execute("INSERT INTO destinos (locais, aeroporto, pontos_turisticos) VALUES (?, ?, ?)", dados_destinos)
 
-
 conn.commit()
 conn.close()
