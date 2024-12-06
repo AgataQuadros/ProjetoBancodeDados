@@ -62,23 +62,3 @@ elif pergunta == "passagem":
     conn.commit()
 
     conn.close()
-
-print(dados_varios_destinos)
-
-# dados_varios_clientes = [
-#     ("Maria Souza", 23456789101, "maria@gmail.com", 987654321, "Cartão de crédito"),
-#     ("Carlos Pereira", 34567891011, "carlos@gmail.com", 912345678, "Pix"),
-#     ("Pedro José", 45678910111, "pedro@gmail.com", 924681012, "Dinheiro"),
-#     ("Ana Costa", 56789101112, "ana@gmail.com", 912151821, "Débito"),
-#     ("Luís Gomes", 67891011121, "luis@gmail.com", 910111213, "Cartão de crédito"),
-#     ("Fernanda Lima", 78910111213, "fernanda@gmail.com", 901001101, "Pix"),
-#     ("Roberto Silva", 89101112131, "roberto@gmail.com", 919293949, "Dinheiro"),
-#     ("Juliana Almeida", 91011121314, "juliana@gmail.com", 900100020, "Débito"),
-#     ("Lucas Martins", 10111213141, "lucas@gmail.com", 912131415, "Cartão de crédito"),
-#     ("Sofia Ferreira", 11121314151, "sofia@gmail.com", 922232425, "Pix"),]
-
-# cursor.executemany(
-#     "INSERT INTO clientes (nome, cpf, email, telefone, modo_pagamento) VALUES (?, ?, ?, ?, ?)", dados_varios_clientes)
-# conn.commit()
-
-# conn.close()
