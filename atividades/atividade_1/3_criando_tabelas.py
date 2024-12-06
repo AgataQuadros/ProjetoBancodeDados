@@ -1,6 +1,6 @@
 import sqlite3
 
-# Conexão ao banco de dados
+
 conn = sqlite3.connect("c:/ProjetoBancodeDados/atividades/atividade_1/importando_sql.db")
 cursor = conn.cursor()
 
