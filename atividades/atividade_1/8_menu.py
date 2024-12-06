@@ -14,17 +14,17 @@ def exibir_menu():
         opcao = input("Escolha uma opção: ")
 
         if opcao == '1':
-            cadastrar_passageiro()
+            pass
         elif opcao == '2':
-            cadastrar_voo()
+            pass
         elif opcao == '3':
-            emitir_passagem()
+            pass
         elif opcao == '4':
-            listar_passagens()
+            pass
         elif opcao == '5':
-            atualizar_informacao()
+            pass
         elif opcao == '6':
-            excluir_registro()
+            pass
         elif opcao == '7':
             print("Saindo do sistema. Até mais!")
             break
