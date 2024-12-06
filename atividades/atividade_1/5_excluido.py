@@ -7,6 +7,7 @@ cursor = conn.cursor()
 
 os.system('cls')
 
+
 pergunta = input("qual tabela consultar? ")
 
 if pergunta == "cliente":
