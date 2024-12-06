@@ -12,7 +12,7 @@
 # (por exemplo, ajustar horários ou destinos) e, quando necessário, 
 # excluir registros de passagens.
 
-# Oque fazer
+# Oque fazer:
 # montar o bd,
 # normalizar as infos, 
 # criar as tabelas, 
