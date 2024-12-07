@@ -7,12 +7,36 @@ cursor = conn.cursor()
 
 os.system('cls')
 
-nome_cliente = input("digite o nome do cliente: ")
-nova_idade = int(input("digite a nova idade: "))
+pergunta = input("qual tabela Atualizar? ")
 
-# atualisa a idade com base no nome do funciomario
-cursor.execute("UPDATE clientes SET idade = ? WHERE nome = ?",
-                (nova_idade, nome_cliente))
+if pergunta == "cliente":
+
+    nome_cliente = input("digite o nome do cliente: ")
+    novo_numero = int(input("digite a novo numero: "))
+
+    cursor.execute("UPDATE clientes SET telefone = ? WHERE nome = ?",
+                    (novo_numero, nome_cliente))
+
+elif pergunta == "site":
+    nome_compania = input("digite o nome da compania: ")
+    novo_cupom = input("digite a novo cupom: ")
+
+    cursor.execute("UPDATE site SET cupons = ? WHERE companias = ?",
+                    (novo_cupom, nome_compania))
+    
+elif pergunta == "destinos":
+    nome_destino = input("digite o nome do Destino: ")
+    novo_turistico = input("digite a novo ponto turistico: ")
+
+    cursor.execute("UPDATE destinos SET pontos_turisticos = ? WHERE locais = ?",
+                    (novo_turistico, nome_destino))
+
+elif pergunta == "passagem":
+    nome_cliente = input("digite o nome do cliente: ")
+    nova_data = input("digite a nova data: ")
+
+    cursor.execute("UPDATE passagem SET data = ? WHERE nome_cliente = ?",
+                    (nova_data, nome_cliente))
 
 # salva as alterações no bd
 conn.commit()
