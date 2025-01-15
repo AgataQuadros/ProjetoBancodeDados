@@ -55,7 +55,7 @@ def inserir_cliente():
     VALUES (?,?,?,?)
     ''', (nome, email, telefone, cidade))
     conn.commit()
-    print('C inserido comscesso!!!!')
+    print('Cliente inserido com scesso!!!!')
 
 
 # Função para inserir os dados na tabela Pedidos
@@ -90,12 +90,12 @@ def inserir_pedido():
             return
         produto = input("Digite o nome do produto: ")
         quantidade = input("Digite a quantidade do produto: ")
-        data = input("Digite a date do pedido: ")
+        data = input("Digite a data do pedido (AAAA-MM-DD): ")
         valor_total = input("Digite o valor total do pedido: ")
 
         # Inserir o pedido no BD
         cursor.execute('''
-        INSERT INTOP pedido (id_cliente, produto,quantidade, data, valor_total) VALUES (?,?,?,?,?))''', (id_cliente, produto,quantidade, data, valor_total))
+        INSERT INTO pedido (id_cliente, produto, quantidade, data, valor_total) VALUES (?,?,?,?,?))''', (id_cliente, produto,quantidade, data, valor_total))
         conn.commit()
 
         print("Pedido inserido com sucesso !")
