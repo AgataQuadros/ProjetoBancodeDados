@@ -7,7 +7,7 @@ import os
 os.system('cls')
 
 
-db_path = Path('BD') / 'bd_rel_1_n.db'
+db_path = Path('um_muitos') / 'bd_rel_1_n.db'
 conn = sqlite3.connect(str(db_path))
 cursor = conn.cursor()
 
