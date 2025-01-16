@@ -28,7 +28,6 @@ CREATE TABLE IF NOT EXISTS Pedidos (
     produto TEXT NOT NULL,
     quantidade TEXT UNUQUE NOT NULL,
     data TEXTNOT NULL,
-    cidade TEXT NOT NULL,
     valor_total REAL NOT NULL,
     FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
 )
@@ -94,8 +93,7 @@ def inserir_pedido():
         valor_total = input("Digite o valor total do pedido: ")
 
         # Inserir o pedido no BD
-        cursor.execute('''
-        INSERT INTO pedido (id_cliente, produto, quantidade, data, valor_total) VALUES (?,?,?,?,?))''', (id_cliente, produto,quantidade, data, valor_total))
+        cursor.execute('''INSERT INTO Pedidos (id_cliente, produto, quantidade, data, valor_total) VALUES (?,?,?,?,?)''', (id_cliente, produto, quantidade, data, valor_total))
         conn.commit()
 
         print("Pedido inserido com sucesso !")
@@ -109,7 +107,7 @@ def inserir_pedido():
 # Função para realizar uma consulta com JOIN e exibir resultados
 def consultar_pedidos():
     cursor.execute('''
-    SELCT
+    SELECT
         Clientes.nome, Clientes.email, Clientes.cidade, 
         Pedidos.produto, Pedidos.quantidade, Pedidos.valor_total
     FROM
