@@ -3,6 +3,7 @@ import consultando
 import excluido
 import adicionando
 import atualizando
+import info
 
 
 os.system("cls")
@@ -15,7 +16,8 @@ while True:
     print("2. Consultar tabelas")
     print("3. Atualizar Informação")
     print("4. Excluir Registro")
-    print("5. Sair")
+    print("5. Acessar todas as informações do cliente")
+    print("6. Sair")
     opcao = input("Escolha uma opção: ")
 
     if opcao == '1':
