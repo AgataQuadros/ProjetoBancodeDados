@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS Pedidos (
     id_pedido INTEGER PRIMARY KEY AUTOINCREMENT,
     id_cliente INTEGER NOT NULL,
     produto TEXT NOT NULL,
-    quantidade TEXT UNUQUE NOT NULL,
-    data TEXTNOT NULL,
+    quantidade TEXT UNIQUE NOT NULL,
+    data TEXT NOT NULL,
     valor_total REAL NOT NULL,
     FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
 )
@@ -108,7 +108,7 @@ def inserir_pedido():
 def consultar_pedidos():
     cursor.execute('''
     SELECT
-        Clientes.nome, Clientes.email, Clientes.cidade, 
+        Clientes.nome, Clientes.email, Clientes.telefone, Clientes.cidade, 
         Pedidos.produto, Pedidos.quantidade, Pedidos.valor_total
     FROM
         Clientes
@@ -132,7 +132,7 @@ def alterar_pedido():
         cursor.execute(
             'Select * FROM Pedidos Where id_pedido = ?', ((id_pedido,))
         )
-        pedido = cursor.fetchall()
+        pedido = cursor.fetchone()
 
         if not pedido:
             print("- " * 70)
