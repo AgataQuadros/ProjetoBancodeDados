@@ -7,7 +7,7 @@ cursor = conn.cursor()
 
 os.system('cls')
 
-def Exclui()
+def Exclui():
     pergunta = input("qual tabela consultar? ")
 
     if pergunta == "cliente":

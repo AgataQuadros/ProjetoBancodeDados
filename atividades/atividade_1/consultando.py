@@ -9,7 +9,7 @@ cursor = conn.cursor()
 def Consulta():
     pergunta = input("qual tabela consultar? ")
 
-    if pergunta == "cliente":
+    if pergunta == "clientes":
         cursor.execute("SELECT * FROM clientes")
         resultados = cursor.fetchall()
 
