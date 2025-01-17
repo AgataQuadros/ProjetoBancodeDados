@@ -38,7 +38,7 @@ def Consulta():
 
         colunas = [descricao[0] for descricao in cursor.description]
 
-        tabela.feal_names = colunas
+        tabela.field_names = colunas
 
         for row in resultados:
             tabela.add_row(row)
@@ -57,7 +57,7 @@ def Consulta():
 
         colunas = [descricao[0] for descricao in cursor.description]
 
-        tabela.feal_names = colunas
+        tabela.field_names = colunas
 
         for row in resultados:
             tabela.add_row(row)
@@ -76,7 +76,7 @@ def Consulta():
 
         colunas = [descricao[0] for descricao in cursor.description]
 
-        tabela.feal_names = colunas
+        tabela.field_names = colunas
 
         for row in resultados:
             tabela.add_row(row)
