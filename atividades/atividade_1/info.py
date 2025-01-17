@@ -12,3 +12,4 @@ cursor = conn.cursor()
 os.system('cls')
 
 # nome, cpf, email, telefone, modo_pagamento, passagem
+# pesquisar por nome e cpf, a pesquisara pricipalmente pelo cpf, assim se tiver alguem com o mesmo nome não me trará dor de cabeça
