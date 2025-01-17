@@ -29,6 +29,8 @@ while True:
     elif opcao == '4':
         excluido.Exclui()
     elif opcao == '5':
+        info.Informação()
+    elif opcao == '6':
         print("Saindo do sistema. Até mais!")
         break
     else:
