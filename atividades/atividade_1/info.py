@@ -28,9 +28,8 @@ def Informação():
             passagem.horario,
             passagem.saida
         FROM clientes
-        LEFT JOIN passagem ON clientes.nome = passagem.nome_cliente
-        WHERE clientes.cpf = ? OR (clientes.nome = ? AND ? IS NULL)
-    """, (cpf_param, nome_param, cpf_param))
+        JOIN passagem ON clientes.nome = passagem.nome_cliente
+    """)
 
     # Obter os resultados
     resultados = cursor.fetchall()
