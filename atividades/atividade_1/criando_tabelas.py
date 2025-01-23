@@ -36,7 +36,7 @@ cursor.execute("""
         assento TEXT NOT NULL,
         voo INTEGER,
         destino TEXT NOT NULL,
-        data TEXT NOT NULL,
+        data DATE NOT NULL,
         horario TEXT NOT NULL,
         saida INTEGER NOT NULL,
         compania_id INTEGER NOT NULL,
